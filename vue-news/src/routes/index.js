@@ -9,7 +9,7 @@ import UserView from '../views/UserView.vue';
 Vue.use(VueRouter);
 
 export default new VueRouter({
-    mode: 'history',
+    mode: 'history', //url의 "#" 해시값 제거
     routes: [{
             path: '/',
             redirect: '/news'
