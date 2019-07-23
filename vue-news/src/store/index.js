@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
-import { fetchNewsList } from '../api/index.js';
-import { fetchAskList } from '../api/index.js';
-import { fetchJobsList } from '../api/index.js';
-
+import { fetchNewsList, fetchAskList, fetchJobsList } from '../api/index.js';
 
 Vue.use(Vuex);
 
