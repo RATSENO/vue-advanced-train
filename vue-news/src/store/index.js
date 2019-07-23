@@ -10,6 +10,11 @@ export const store = new Vuex.Store({
         ask: [],
         jobs: []
     },
+    getters: {
+        fetchedAsk(state) {
+            return state.ask;
+        }
+    },
     mutations: {
         SET_NEWS(state, news) {
             state.news = news;
@@ -33,11 +38,11 @@ export const store = new Vuex.Store({
 
                 });
         },
-        FETCH_ASK(context) {
+        FETCH_ASK({ commit }) {
             fetchAskList()
-                .then(response => {
+                .then(({ data }) => {
 
-                    context.commit('SET_ASK', response.data);
+                    commit('SET_ASK', data);
 
                 })
                 .catch(error => {
