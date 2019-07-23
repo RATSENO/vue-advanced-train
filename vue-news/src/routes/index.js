@@ -6,7 +6,7 @@ import JobsView from '../views/JobsView.vue';
 
 Vue.use(VueRouter);
 
-export default new VueRouter({
+export const router = new VueRouter({
     mode: 'history', //url의 "#" 해시값 제거
     routes: [{
             path: '/',
